@@ -26,5 +26,6 @@ set(CPACK_PACKAGE_NAME "lab6")
 set(CPACK_PACKAGE_VERSION "1.0.0")
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Lab6 project with solver and banking")
 set(CPACK_PACKAGE_VENDOR "Student")
+set(CPACK_PACKAGE_CONTACT "sabirovatamara77@gmail.com")
 
 include(CPack)
