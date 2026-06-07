@@ -1,3 +1,5 @@
 #pragma once
 
-void solve(float a, float b, float c, float& x1, float& x2);
+#include <utility>
+
+std::pair<double, double> solve(double a, double b, double c);
