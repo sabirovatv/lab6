@@ -40,3 +40,15 @@ jobs:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         path-to-lcov: build/coverage.cleaned.info
 
+    - name: Build packages with CPack
+      run: |
+        cd build
+        cmake --build . --target package
+
+    - name: Upload packages as artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: packages
+        path: |
+          build/*.deb
+          build/*.tar.gz
