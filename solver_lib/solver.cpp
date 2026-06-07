@@ -4,7 +4,7 @@
 std::pair<double, double> solve(double a, double b, double c) {
     double d = b * b - 4 * a * c;
     if (d < 0) {
-        return {std::nan(""), std::nan("")};  // вместо {NAN, NAN}
+        return {std::nan(""), std::nan("")};
     }
     double sqrt_d = sqrt(d);
     double x1 = (-b - sqrt_d) / (2 * a);
