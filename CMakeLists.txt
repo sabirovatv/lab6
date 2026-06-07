@@ -21,3 +21,10 @@ add_subdirectory(tests)
 add_subdirectory(hello_world_application)
 add_subdirectory(solver_application)
 
+set(CPACK_GENERATOR "DEB" "TGZ")
+set(CPACK_PACKAGE_NAME "lab6")
+set(CPACK_PACKAGE_VERSION "1.0.0")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Lab6 project with solver and banking")
+set(CPACK_PACKAGE_VENDOR "Student")
+
+include(CPack)
