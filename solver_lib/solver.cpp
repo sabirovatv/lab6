@@ -1,16 +1,13 @@
 #include "solver.h"
-#include <cmath> 
-#include <stdexcept>
+#include <cmath>
 
-void solve(float a, float b, float c, float& x1, float& x2)
-{
-    float d = (b * b) - (4 * a * c);
-
-    if (d < 0)
-    {
-        throw std::logic_error{"error: discriminant < 0"};
+std::pair<double, double> solve(double a, double b, double c) {
+    double d = b * b - 4 * a * c;
+    if (d < 0) {
+        return {std::nan(""), std::nan("")};  // вместо {NAN, NAN}
     }
-
-    x1 = (-b - std::sqrt(d))/ (2 * a);
-    x2 = (-b + std::sqrt(d)) / (2 * a);
+    double sqrt_d = sqrt(d);
+    double x1 = (-b - sqrt_d) / (2 * a);
+    double x2 = (-b + sqrt_d) / (2 * a);
+    return {x1, x2};
 }
